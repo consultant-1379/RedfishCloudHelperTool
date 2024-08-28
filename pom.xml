@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.ericsson.litp</groupId>
+        <artifactId>integration</artifactId>
+        <version>2.47.1</version>
+    </parent>
+
+    <groupId>com.ericsson.nms.litp</groupId>
+    <artifactId>RedfishCloudHelperTool</artifactId>
+    <version>1.0.13-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <com.ericsson.nms.litp.forbidden-str.skip>true</com.ericsson.nms.litp.forbidden-str.skip>
+        <ericsson.scm.url>scm:git:ssh://gerrit.ericsson.se:29418/LITP/${project.groupId}/${project.artifactId}</ericsson.scm.url>
+        <!-- publishes the rpm module to the CI portal -->
+        <publish_artifact>false</publish_artifact>
+        <packaging.type>rpm</packaging.type>
+    </properties>
+
+    <scm>
+        <connection>${ericsson.scm.url}</connection>
+        <developerConnection>${ericsson.scm.url}</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <modules>
+        <module>RedfishCloudHelper</module>
+    </modules>
+
+</project>
